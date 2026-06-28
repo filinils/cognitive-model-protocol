@@ -1,0 +1,311 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/filinils/cognitive-model-protocol/schema/cmp.schema.json",
+  "$comment": "SPDX-License-Identifier: Apache-2.0",
+  "title": "Cognitive Model Protocol",
+  "description": "Draft schema for explicit, evidence-based cognitive collaboration models between humans and AI.",
+  "type": "object",
+  "required": [
+    "protocol_version",
+    "model_id",
+    "subject_ref",
+    "model_purpose",
+    "created_at",
+    "updated_at",
+    "collaboration_model",
+    "hypotheses",
+    "interaction_patterns",
+    "matching_signals",
+    "complementarity_signals",
+    "revision_history",
+    "user_controls"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "protocol_version": {
+      "type": "string",
+      "const": "0.1.0-draft"
+    },
+    "model_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject_ref": {
+      "type": "string",
+      "description": "A privacy-preserving reference to the person or party involved in the collaboration.",
+      "minLength": 1
+    },
+    "model_purpose": {
+      "type": "string",
+      "description": "The intended collaboration context for this model.",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "collaboration_model": {
+      "type": "object",
+      "required": [
+        "summary",
+        "scope",
+        "known_limits"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "summary": {
+          "type": "string"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "known_limits": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "hypotheses": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/hypothesis"
+      }
+    },
+    "interaction_patterns": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/model_signal"
+      }
+    },
+    "matching_signals": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/model_signal"
+      }
+    },
+    "complementarity_signals": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/model_signal"
+      }
+    },
+    "revision_history": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/revision"
+      }
+    },
+    "user_controls": {
+      "type": "object",
+      "required": [
+        "inspectable",
+        "exportable",
+        "deletable",
+        "challenge_mechanism",
+        "correction_mechanism"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "inspectable": {
+          "type": "boolean"
+        },
+        "exportable": {
+          "type": "boolean"
+        },
+        "deletable": {
+          "type": "boolean"
+        },
+        "challenge_mechanism": {
+          "type": "string"
+        },
+        "correction_mechanism": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "hypothesis": {
+      "type": "object",
+      "required": [
+        "id",
+        "statement",
+        "type",
+        "evidence",
+        "confidence",
+        "uncertainty",
+        "falsifiers",
+        "status",
+        "created_at",
+        "updated_at"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "interaction_pattern",
+            "matching_signal",
+            "complementarity_signal",
+            "constraint",
+            "preference",
+            "risk",
+            "capability",
+            "uncertainty",
+            "other"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "uncertainty": {
+          "type": "string"
+        },
+        "falsifiers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "proposed",
+            "active",
+            "challenged",
+            "revised",
+            "rejected",
+            "retired"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "required": [
+        "id",
+        "description",
+        "source_type",
+        "strength",
+        "timestamp"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_type": {
+          "type": "string",
+          "enum": [
+            "user_statement",
+            "interaction_trace",
+            "artifact",
+            "correction",
+            "evaluation",
+            "external_reference",
+            "implementation_trace",
+            "other"
+          ]
+        },
+        "strength": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "model_signal": {
+      "type": "object",
+      "required": [
+        "id",
+        "description",
+        "related_hypotheses"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "related_hypotheses": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "revision": {
+      "type": "object",
+      "required": [
+        "id",
+        "timestamp",
+        "actor",
+        "description"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "actor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

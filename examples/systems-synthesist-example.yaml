@@ -1,0 +1,117 @@
+protocol_version: 0.1.0-draft
+model_id: cmp-example-systems-synthesist
+subject_ref: fictional-anonymized-subject
+model_purpose: Illustrate a collaboration model for a fictional person who tends to reason across domains.
+created_at: "2026-06-28T00:00:00Z"
+updated_at: "2026-06-28T00:00:00Z"
+collaboration_model:
+  summary: An illustrative fictional example of a cross-domain systems synthesist. This is not a template for everyone.
+  scope: Concept development, research framing, protocol design, and translation from abstract models into concrete artifacts.
+  known_limits:
+    - This example is fictional and anonymized.
+    - It should not be used as a personality label.
+    - Each element remains a hypothesis that would require evidence and user review in a real model.
+hypotheses:
+  - id: hyp-001
+    statement: The collaborator often reasons across domains and looks for structural similarities between problems.
+    type: interaction_pattern
+    evidence:
+      - id: ev-001
+        description: In the fictional source material, the collaborator repeatedly connected design, governance, cognition, and implementation concerns.
+        source_type: artifact
+        strength: 0.7
+        timestamp: "2026-06-28T00:00:00Z"
+    confidence: 0.68
+    uncertainty: The pattern may be strongest during early framing work and weaker during execution tasks.
+    falsifiers:
+      - The collaborator prefers narrow domain analysis in future comparable tasks.
+      - Cross-domain synthesis produces confusion or lower-quality outcomes.
+    status: proposed
+    created_at: "2026-06-28T00:00:00Z"
+    updated_at: "2026-06-28T00:00:00Z"
+  - id: hyp-002
+    statement: The collaborator tends to seek synthesis and model-building before settling on fixed conclusions.
+    type: interaction_pattern
+    evidence:
+      - id: ev-002
+        description: The fictional example emphasizes iterating on models and preserving open questions during concept formation.
+        source_type: artifact
+        strength: 0.75
+        timestamp: "2026-06-28T00:00:00Z"
+    confidence: 0.72
+    uncertainty: The collaborator may still want decisive closure when operational decisions are due.
+    falsifiers:
+      - The collaborator repeatedly asks to stop reframing and commit earlier.
+      - Model-building delays practical progress in a way the collaborator rejects.
+    status: proposed
+    created_at: "2026-06-28T00:00:00Z"
+    updated_at: "2026-06-28T00:00:00Z"
+  - id: hyp-003
+    statement: The collaborator values feedback loops and responds well to constructive resistance.
+    type: matching_signal
+    evidence:
+      - id: ev-003
+        description: The fictional source material frames challenge, critique, and falsifiability as useful parts of collaboration.
+        source_type: artifact
+        strength: 0.65
+        timestamp: "2026-06-28T00:00:00Z"
+    confidence: 0.64
+    uncertainty: Resistance should be tied to the work and not become dismissive or adversarial.
+    falsifiers:
+      - The collaborator rejects challenge when it arrives before adequate understanding.
+      - Constructive resistance reduces momentum or trust in repeated interactions.
+    status: proposed
+    created_at: "2026-06-28T00:00:00Z"
+    updated_at: "2026-06-28T00:00:00Z"
+  - id: hyp-004
+    statement: The collaboration may benefit from complementary partners who test and operationalize abstract ideas.
+    type: complementarity_signal
+    evidence:
+      - id: ev-004
+        description: The fictional example includes a need for collaborators who can turn abstract synthesis into implementation checks, tests, and next actions.
+        source_type: artifact
+        strength: 0.7
+        timestamp: "2026-06-28T00:00:00Z"
+    confidence: 0.66
+    uncertainty: The needed complement may vary by phase; early ideation may need different support from implementation.
+    falsifiers:
+      - Operational pressure too early weakens the quality of the model.
+      - The collaborator already has sufficient testing and operationalization in a given context.
+    status: proposed
+    created_at: "2026-06-28T00:00:00Z"
+    updated_at: "2026-06-28T00:00:00Z"
+interaction_patterns:
+  - id: ip-001
+    description: Connects ideas across domains to form working models.
+    related_hypotheses:
+      - hyp-001
+      - hyp-002
+  - id: ip-002
+    description: Uses feedback loops and critique to refine models.
+    related_hypotheses:
+      - hyp-003
+matching_signals:
+  - id: ms-001
+    description: Constructive resistance is useful when it is specific, evidence-based, and oriented toward improving the model.
+    related_hypotheses:
+      - hyp-003
+  - id: ms-002
+    description: Collaboration works best when uncertainty and open questions remain visible during synthesis.
+    related_hypotheses:
+      - hyp-002
+complementarity_signals:
+  - id: cs-001
+    description: Complementary collaborators should test abstractions, identify edge cases, and translate models into concrete steps.
+    related_hypotheses:
+      - hyp-004
+revision_history:
+  - id: rev-001
+    timestamp: "2026-06-28T00:00:00Z"
+    actor: example-author
+    description: Created illustrative fictional systems-synthesist example.
+user_controls:
+  inspectable: true
+  exportable: true
+  deletable: true
+  challenge_mechanism: The user can challenge any hypothesis, evidence item, or inferred signal.
+  correction_mechanism: Corrections should update affected hypotheses and preserve a revision record.

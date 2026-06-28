@@ -1,0 +1,68 @@
+protocol_version: 0.1.0-draft
+model_id: cmp-example-minimal
+subject_ref: local-user-001
+model_purpose: Explore a small collaboration model for drafting and revision.
+created_at: "2026-06-28T00:00:00Z"
+updated_at: "2026-06-28T00:00:00Z"
+collaboration_model:
+  summary: A minimal example showing how CMP represents provisional collaboration hypotheses.
+  scope: Drafting and revising short written artifacts.
+  known_limits:
+    - The example is generic and should not be treated as a template for everyone.
+    - The hypotheses are illustrative and require user review before use.
+hypotheses:
+  - id: hyp-001
+    statement: The collaboration may improve when the assistant offers a concise first draft before expanding detail.
+    type: interaction_pattern
+    evidence:
+      - id: ev-001
+        description: In a sample drafting task, the user asked for a concise version before exploring alternatives.
+        source_type: interaction_trace
+        strength: 0.5
+        timestamp: "2026-06-28T00:00:00Z"
+    confidence: 0.45
+    uncertainty: This may reflect the task, not a durable collaboration preference.
+    falsifiers:
+      - The user asks for expansive exploration first in similar drafting tasks.
+      - The concise draft omits context the user considers essential.
+    status: proposed
+    created_at: "2026-06-28T00:00:00Z"
+    updated_at: "2026-06-28T00:00:00Z"
+  - id: hyp-002
+    statement: The user may prefer visible uncertainty when a recommendation depends on incomplete context.
+    type: matching_signal
+    evidence:
+      - id: ev-002
+        description: The sample interaction included a request to preserve caveats rather than collapse them into a firm recommendation.
+        source_type: user_statement
+        strength: 0.6
+        timestamp: "2026-06-28T00:00:00Z"
+    confidence: 0.55
+    uncertainty: The pattern has not been tested across domains.
+    falsifiers:
+      - The user asks for decisive recommendations without caveats in comparable contexts.
+    status: proposed
+    created_at: "2026-06-28T00:00:00Z"
+    updated_at: "2026-06-28T00:00:00Z"
+interaction_patterns:
+  - id: ip-001
+    description: Start concise, then expand if invited.
+    related_hypotheses:
+      - hyp-001
+matching_signals:
+  - id: ms-001
+    description: Make uncertainty visible when context is incomplete.
+    related_hypotheses:
+      - hyp-002
+complementarity_signals: []
+revision_history:
+  - id: rev-001
+    timestamp: "2026-06-28T00:00:00Z"
+    actor: example-author
+    description: Created minimal illustrative CMP example.
+user_controls:
+  inspectable: true
+  exportable: true
+  deletable: true
+  challenge_mechanism: The user can mark any hypothesis as challenged and add a correction.
+  correction_mechanism: Corrections should create a revision entry and update affected hypotheses.

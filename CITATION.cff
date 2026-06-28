@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: Cognitive Model Protocol
+message: "If you use or adapt CMP, please cite it."
+authors:
+  - family-names: Nilsson
+    given-names: Filip
+version: 0.1.0-draft
+license: CC-BY-4.0
+repository-code: "https://github.com/filinils/cognitive-model-protocol"
+url: "https://github.com/filinils/cognitive-model-protocol"
