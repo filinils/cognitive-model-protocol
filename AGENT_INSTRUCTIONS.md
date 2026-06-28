@@ -1,38 +1,66 @@
-# Agent Instructions
+# Agent Usage for CMP Discussions
 
-This repository contains the canonical materials for the Cognitive Model Protocol (CMP):
+This repository contains the canonical specification, rationale, schema, and examples for the Cognitive Model Protocol (CMP). Protocol discussions **must not** be committed to the codebase. Instead, use GitHub Discussions.
 
-- the canonical protocol reference in `reference/current.md`
-- the rationale in `RATIONALE.md`
-- the technical field specification in `SPEC.md`
-- the JSON Schema in `schema/cmp.schema.json`
-- example CMP documents in `examples/`
-- supporting project instructions and governance files
+## When to use Discussions vs Issues
 
-Do not commit dialogues, raw transcripts, working conversations, meeting notes, or design discussions to this repository.
+- Use **Discussions** for questions, brainstorming, proposals, critique, and open problems about CMP. Discussions are meant for exploratory conversation and feedback.
+- Use **Issues** when there is a concrete action to take in the repository, such as adding a field, fixing a typo, or publishing a new draft.
 
-The repository is for stable protocol materials, rationale, specification, schema, examples, and contribution guidance. Discussion records belong outside the repository unless they have been distilled into a protocol change, rationale update, example, issue, or pull request.
+## Using GitHub CLI to interact with Discussions
 
-## External Discussion
+Agents and humans can interact with Discussions via the GitHub CLI:
 
-Agents and automated processes should use GitHub Issues or GitHub Discussions for proposals, questions, critique, and design discussion.
+- List recent discussions:
 
-Use the GitHub CLI when available:
+  ```bash
+  gh discussion list --repo filinils/cognitive-model-protocol
+  ```
 
-```sh
+- Create a new discussion:
+
+  ```bash
+  gh discussion create \
+    --repo filinils/cognitive-model-protocol \
+    --title "CMP Question: Evidence ageing" \
+    --category "General" \
+    --body "Describe your question or idea here..."
+  ```
+
+- Comment on an existing discussion (replace 123 with the discussion number):
+
+  ```bash
+  gh discussion comment --repo filinils/cognitive-model-protocol 123 --body "Your comment..."
+  ```
+
+Please do **not** store raw dialogue transcripts in the repository. Summarise conversations and link back to the relevant discussion if necessary.
+
+## Using Issues for concrete repository actions
+
+Use GitHub Issues when the conversation has become an actionable repository change:
+
+```bash
 gh issue create --title "CMP Question: Evidence Ageing" --body "..."
 gh issue create --title "CMP Proposal: Conformance Definition" --body "..."
-gh issue create --title "CMP Critique: User Control Semantics" --body "..."
 ```
 
-For GitHub Discussions, use `gh api` or the GitHub web interface, depending on repository configuration and available permissions.
+## Categories
 
-## Summaries
+Current GitHub Discussions categories can be listed with:
 
-Agents, or humans acting on their behalf, may summarize external conversations and post distilled insights as GitHub issues, discussion posts, or comments.
+```bash
+gh api graphql \
+  -f owner=filinils \
+  -f name=cognitive-model-protocol \
+  -f query='query($owner:String!, $name:String!) { repository(owner:$owner, name:$name) { discussionCategories(first: 50) { nodes { name description } } } }'
+```
 
-Do not store raw transcripts in this repository. If a conversation produces a useful protocol insight, record the insight as a concise issue, pull request, or documentation change.
+Choose the category that best matches the topic. If a needed category does not exist, propose adding it through a GitHub issue or repository settings; do not create placeholder files in this repository.
 
-## Future Automation
+Suggested category names for future repository settings, if supported by GitHub configuration:
 
-Future workflows may summarize external discussions into issues or discussion comments. Such pipelines should run outside this repository unless and until they produce stable protocol documentation or contribution guidance.
+- General
+- Proposals
+- Critique
+- Conformance
+- Open Questions

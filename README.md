@@ -12,3 +12,7 @@ Current draft: `0.1.0-draft`
 - [Critique guide](docs/critique.md)
 - [Agent instructions](AGENT_INSTRUCTIONS.md)
 - [Issue templates](.github/ISSUE_TEMPLATE/)
+
+## Agent Usage
+
+Protocol discussions must happen via GitHub Discussions, not as committed repository files. See [AGENT_INSTRUCTIONS.md](AGENT_INSTRUCTIONS.md).
