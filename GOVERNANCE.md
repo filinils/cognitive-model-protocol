@@ -2,6 +2,8 @@
 
 CMP is currently a draft protocol maintained by Filip Nilsson.
 
+The canonical protocol definition is [reference/current.md](reference/current.md).
+
 The initial governance model is intentionally simple:
 
 - Maintainer: Filip Nilsson.

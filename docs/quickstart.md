@@ -2,6 +2,8 @@
 
 This page shows how to create a minimal CMP collaboration model.
 
+Read the canonical protocol definition first: [reference/current.md](https://github.com/filinils/cognitive-model-protocol/blob/main/reference/current.md).
+
 ## 1. Set the Protocol Metadata
 
 Start with a stable model ID, purpose, timestamps, and a privacy-preserving subject reference.

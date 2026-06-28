@@ -2,6 +2,8 @@
 
 CMP is a draft. The project is currently seeking criticism more than adoption.
 
+The canonical protocol definition is [reference/current.md](https://github.com/filinils/cognitive-model-protocol/blob/main/reference/current.md).
+
 The goal of draft 0.1 is to test whether the problem is framed correctly: LLMs already form implicit working models of users, and those models may need to become more explicit, evidence-based, uncertainty-aware, revisable, and portable.
 
 CMP models collaboration with a user, not the user's identity. Critique should help clarify where that framing works, where it fails, and where it creates risk.

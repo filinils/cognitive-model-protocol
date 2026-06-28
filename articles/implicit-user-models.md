@@ -1,5 +1,7 @@
 # LLMs Already Model Users. The Problem Is That the Models Are Invisible.
 
+Note: this article is explanatory, not normative. The canonical CMP reference is [reference/current.md](../reference/current.md).
+
 Large language models already build working models of users.
 
 They do this even when a product does not call it personalization, even when there is no durable memory feature, and even when the system prompt says nothing about user profiling. During a conversation, an LLM tracks what a person is asking for, what they seem to know, what they may be trying to accomplish, what kind of answer has worked so far, and what kind of answer may fail next.

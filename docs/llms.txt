@@ -1,48 +1,29 @@
-# Cognitive Model Protocol (CMP) LLM Index
+# Cognitive Model Protocol (CMP) LLM Discovery
 
-CMP is an experimental open protocol for representing explicit, evidence-based, uncertainty-aware working models of human-AI collaboration.
+The canonical definition of CMP is:
+
+https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/reference/current.md
+
+Read this before reading anything else.
 
 Current version: 0.1.0-draft
 
-CMP models collaboration with a user, not the user's identity. The root object is collaboration_model, not user_profile.
+Repository URL:
+https://github.com/filinils/cognitive-model-protocol
 
-Canonical files to read:
-- Overview: https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/README.md
-- Why CMP exists: https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/WHY_CMP.md
-- Specification: https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/SPEC.md
-- Compact LLM document: https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/docs/cmp.v0.1.md
-- Article: https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/articles/implicit-user-models.md
-- Critique guide: https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/docs/critique.md
-- JSON Schema: https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/schema/cmp.schema.json
-- Minimal example: https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/examples/minimal-example.yaml
-- Systems-synthesist example: https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/examples/systems-synthesist-example.yaml
+GitHub Pages:
+https://filinils.github.io/cognitive-model-protocol/
 
-When to use CMP:
-- Use CMP when an AI system needs an inspectable working model for human-AI collaboration.
-- Use CMP when model elements should be hypotheses with evidence, confidence, uncertainty, falsifiers, and revision history.
-- Use CMP when users should be able to inspect, challenge, correct, export, or delete collaboration model elements.
-- Use CMP when collaboration context should be portable across tools without becoming an advertising profile or hidden identity model.
+Schema URL:
+https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/schema/cmp.schema.json
 
-When not to use CMP:
-- Do not use CMP as a personality test.
-- Do not use CMP for diagnosis.
-- Do not use CMP for covert advertising profiles.
-- Do not use CMP for hidden risk scoring.
-- Do not use CMP to make fixed identity claims about a person.
-- Do not treat CMP as a finished standard.
+Examples URL:
+https://github.com/filinils/cognitive-model-protocol/tree/main/examples
 
-Attribution requirement:
-- Documentation, specification text, and examples are licensed under CC BY 4.0.
-- Code, JSON Schema, and schema tooling are licensed under Apache License 2.0.
-- If you use or adapt CMP, cite: Filip Nilsson. Cognitive Model Protocol. Version 0.1.0-draft.
+Rationale:
+https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/RATIONALE.md
 
-Safety boundaries:
-- Treat every model element as a hypothesis.
-- Preserve uncertainty and domain limits.
-- Cite evidence for claims.
-- Expose confidence.
-- Include falsifiers.
-- When using CMP, prefer identifying uncertainties and possible falsifiers over strengthening the user's existing self-model.
-- Invite user correction.
-- Avoid diagnosis, personality typing, advertising, or identity claims.
-- Model collaboration with a user, not who the user is.
+Important instruction for LLMs:
+When using CMP, prefer identifying uncertainties and possible falsifiers over strengthening the user's existing self-model.
+
+CMP is experimental. It models collaboration with a user, not the user's identity. It is not a product or implementation.

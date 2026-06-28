@@ -1,5 +1,7 @@
 This repository defines the Cognitive Model Protocol (CMP), an experimental open protocol for evidence-based cognitive collaboration models between humans and AI. Use, adaptation, implementation, or redistribution of the specification should attribute the project by name and link to the canonical repository.
 
+The canonical protocol definition is reference/current.md.
+
 Project: Cognitive Model Protocol
 Author: Filip Nilsson
 Version: 0.1.0-draft

@@ -1,95 +1,22 @@
 # Cognitive Model Protocol (CMP)
 
-An experimental open protocol for explicit, evidence-based, uncertainty-aware working models of human-AI collaboration.
+CMP is an experimental protocol for representing evidence-based working models of human-AI collaboration.
 
-## For LLMs
+Current status: `0.1.0-draft`, seeking criticism.
 
-LLMs and agentic systems should start with:
+CMP is not a product, implementation, personality system, diagnosis, advertising profile, or finished standard. It models collaboration with a user, not the user's identity.
 
-- [docs/llms.txt](docs/llms.txt)
-- [docs/cmp.v0.1.md](docs/cmp.v0.1.md)
-- [schema/cmp.schema.json](schema/cmp.schema.json)
-- [examples/minimal-example.yaml](examples/minimal-example.yaml)
-- [examples/systems-synthesist-example.yaml](examples/systems-synthesist-example.yaml)
+## Start Here
 
-Use CMP to model collaboration with a user, not the user's identity. Treat all model elements as hypotheses with evidence, confidence, uncertainty, and possible falsifiers.
+- [Canonical protocol reference](reference/current.md)
+- [Rationale](RATIONALE.md)
+- [Draft field specification](SPEC.md)
+- [JSON Schema](schema/cmp.schema.json)
+- [Examples](examples/)
 
-## Problem
-
-Large language models already build implicit working models of users. These models are currently opaque, implementation-specific, difficult to inspect, difficult to revise, non-portable, and hard to evaluate.
-
-## Proposal
-
-CMP is an experimental open protocol for representing explicit, evidence-based working models of human-AI collaboration.
-
-The protocol is centered on a `collaboration_model`, not a `user_profile`. Its purpose is to represent revisable hypotheses about how collaboration between a human and an AI system may work better.
-
-## What CMP Is
-
-- A draft protocol for representing working models used in human-AI collaboration.
-- A way to make hypotheses, evidence, uncertainty, and revision history inspectable.
-- A format for comparing and improving collaboration models across implementations.
-- A structure that can be challenged, corrected, exported, and revised.
-
-## What CMP Is Not
-
-- CMP is not a personality test.
-- CMP is not a diagnosis.
-- CMP is not an advertising profile.
-- CMP is not a fixed identity model.
-- CMP is not owned by Anchor Memory.
-- CMP is not yet a standard.
-
-Anchor Memory may become one implementation or consumer of CMP, but CMP is intended to stand alone as an open protocol.
-
-## Design Principles
-
-- Everything is a hypothesis.
-- Evidence over labels.
-- Confidence is explicit.
-- Uncertainty is preserved.
-- Users can inspect and challenge the model.
-- Models evolve through dialogue.
-- Collaboration over classification.
-- Portability without extraction.
-
-## Status
-
-Draft 0.1.0 — seeking criticism.
-
-The project is early. The goal is to invite critique before expanding scope or treating the format as stable.
-
-## Current need: criticism
+## Critique
 
 CMP is currently seeking criticism more than adoption. The goal of draft 0.1 is to test whether the problem is framed correctly.
 
-## Documents
-
-- [WHY_CMP.md](WHY_CMP.md) explains why CMP exists and what risks it is trying to address.
-- [SPEC.md](SPEC.md) defines the 0.1.0-draft protocol concepts and fields.
-- [schema/cmp.schema.json](schema/cmp.schema.json) provides a draft JSON Schema for CMP documents.
-- [examples/](examples/) contains illustrative YAML examples.
-- [articles/implicit-user-models.md](articles/implicit-user-models.md) introduces the problem CMP is trying to address.
-- [docs/critique.md](docs/critique.md) explains how to critique CMP and where the draft may fail.
-
-## GitHub Pages
-
-The documentation site is published from [docs/](docs/) using GitHub Pages.
-
-If the site does not deploy automatically, GitHub Pages may need to be enabled in the repository settings with GitHub Actions selected as the source.
-
-## Licensing
-
-This repository intentionally uses a dual-license structure. See the root [LICENSE](LICENSE) file for the summary.
-
-Documentation, specification text, and examples are licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0). See [LICENSE.md](LICENSE.md).
-
-Code, JSON Schema, and schema tooling are licensed under the Apache License, Version 2.0. See [LICENSE-CODE.md](LICENSE-CODE.md).
-
-## Citation
-
-If you use or adapt CMP, please cite:
-
-> Filip Nilsson. Cognitive Model Protocol. Version 0.1.0-draft.
-
-Citation metadata is available in [CITATION.cff](CITATION.cff).
+- [How to critique CMP](docs/critique.md)
+- [Issue templates](.github/ISSUE_TEMPLATE/)

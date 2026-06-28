@@ -2,6 +2,8 @@
 
 The repository includes two draft YAML examples.
 
+The canonical protocol definition is [reference/current.md](https://github.com/filinils/cognitive-model-protocol/blob/main/reference/current.md).
+
 ## Minimal Example
 
 [examples/minimal-example.yaml](https://github.com/filinils/cognitive-model-protocol/blob/main/examples/minimal-example.yaml)

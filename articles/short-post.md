@@ -1,5 +1,7 @@
 # Short Post
 
+Canonical CMP reference: https://github.com/filinils/cognitive-model-protocol/blob/main/reference/current.md
+
 LLMs already build working models of users during conversation.
 
 They infer what someone is trying to do, what context matters, what level of detail is useful, when to ask questions, and what kind of feedback may help. This happens even when a product does not call it personalization or memory.

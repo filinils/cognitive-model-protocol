@@ -2,6 +2,8 @@
 
 CMP is a draft protocol seeking criticism.
 
+The canonical protocol definition is [reference/current.md](reference/current.md).
+
 Contributions are welcome in the form of issues, pull requests, examples, schema improvements, ethical concerns, implementation notes, and alternative formulations.
 
 Please prioritize critique before expansion. The project should become clearer before it becomes larger.
