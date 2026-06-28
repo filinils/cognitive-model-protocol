@@ -1,0 +1,43 @@
+protocol: cognitive-model-protocol
+version: 0.1.0-draft
+status: experimental
+entrypoints:
+  human: README.md
+  agent: AGENTS.md
+  llm_notes: docs/llms.txt
+  canonical_reference: reference/current.md
+  rationale: RATIONALE.md
+  spec: SPEC.md
+  schema: schema/cmp.schema.json
+  critique: docs/critique.md
+  examples:
+    minimal: examples/minimal-example.yaml
+    systems_synthesist: examples/systems-synthesist-example.yaml
+purpose: >
+  Represent explicit, evidence-based, uncertainty-aware working models
+  of human-AI collaboration.
+primary_model: collaboration_model
+not_for:
+  - personality_classification
+  - diagnosis
+  - advertising_profile
+  - fixed_identity_model
+  - hidden_user_profiling
+  - surveillance
+core_principles:
+  - collaboration_over_classification
+  - everything_is_a_hypothesis
+  - evidence_over_labels
+  - explicit_confidence
+  - preserved_uncertainty
+  - user_inspectable
+  - user_revisable
+  - portability_without_extraction
+boundaries:
+  anchor_memory: implementation_or_consumer_not_protocol_owner
+  model_scope: collaboration_context_not_person_identity
+validation:
+  schema: schema/cmp.schema.json
+  examples:
+    - examples/minimal-example.yaml
+    - examples/systems-synthesist-example.yaml

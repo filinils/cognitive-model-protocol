@@ -1,19 +1,42 @@
-# Cognitive Model Protocol (CMP) LLM Discovery
+# Cognitive Model Protocol (CMP) LLM Instructions
 
-Canonical definition:
-https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/reference/current.md
+Start here:
 
-Current version:
-0.1.0-draft
+1. `AGENTS.md`
+2. `cmp.manifest.yaml`
+3. `reference/current.md`
+4. `SPEC.md`
+5. `schema/cmp.schema.json`
+6. `examples/`
+
+Current version: `0.1.0-draft`
 
 Repository URL:
 https://github.com/filinils/cognitive-model-protocol
 
-Schema URL:
+Agent entrypoint:
+https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/AGENTS.md
+
+Machine-readable manifest:
+https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/cmp.manifest.yaml
+
+Canonical reference:
+https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/reference/current.md
+
+Schema:
 https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/schema/cmp.schema.json
 
-Examples URL:
+Examples:
 https://github.com/filinils/cognitive-model-protocol/tree/main/examples
 
-Rationale URL:
-https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/RATIONALE.md
+Operational rules:
+
+- Do not classify the human.
+- Do not treat CMP as a user profile, personality model, diagnosis system, advertising profile, hidden user model, or fixed identity model.
+- Model the collaboration context, not the person.
+- Do not infer beyond evidence.
+- Preserve uncertainty.
+- Prefer falsifiable hypotheses over traits.
+- Use evidence, confidence, uncertainty, and falsifiers for CMP model statements.
+- Treat Anchor Memory as a possible implementation or consumer, not the protocol owner.
+- Validate CMP documents against `schema/cmp.schema.json`.

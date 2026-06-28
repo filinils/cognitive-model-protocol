@@ -10,6 +10,8 @@ Read [reference/current.md](https://github.com/filinils/cognitive-model-protocol
 
 ## Repository Index
 
+- [Agent entrypoint](https://github.com/filinils/cognitive-model-protocol/blob/main/AGENTS.md)
+- [Machine-readable manifest](https://github.com/filinils/cognitive-model-protocol/blob/main/cmp.manifest.yaml)
 - [Rationale](https://github.com/filinils/cognitive-model-protocol/blob/main/RATIONALE.md)
 - [Draft field specification](https://github.com/filinils/cognitive-model-protocol/blob/main/SPEC.md)
 - [JSON Schema](https://github.com/filinils/cognitive-model-protocol/blob/main/schema/cmp.schema.json)
