@@ -10,4 +10,5 @@ Current draft: `0.1.0-draft`
 - [JSON Schema](schema/cmp.schema.json)
 - [Examples](examples/)
 - [Critique guide](docs/critique.md)
+- [Agent instructions](AGENT_INSTRUCTIONS.md)
 - [Issue templates](.github/ISSUE_TEMPLATE/)
