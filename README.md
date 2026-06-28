@@ -2,6 +2,18 @@
 
 An experimental open protocol for explicit, evidence-based, uncertainty-aware working models of human-AI collaboration.
 
+## For LLMs
+
+LLMs and agentic systems should start with:
+
+- [docs/llms.txt](docs/llms.txt)
+- [docs/cmp.v0.1.md](docs/cmp.v0.1.md)
+- [schema/cmp.schema.json](schema/cmp.schema.json)
+- [examples/minimal-example.yaml](examples/minimal-example.yaml)
+- [examples/systems-synthesist-example.yaml](examples/systems-synthesist-example.yaml)
+
+Use CMP to model collaboration with a user, not the user's identity. Treat all model elements as hypotheses with evidence, confidence, uncertainty, and possible falsifiers.
+
 ## Problem
 
 Large language models already build implicit working models of users. These models are currently opaque, implementation-specific, difficult to inspect, difficult to revise, non-portable, and hard to evaluate.
@@ -53,6 +65,12 @@ The project is early. The goal is to invite critique before expanding scope or t
 - [SPEC.md](SPEC.md) defines the 0.1.0-draft protocol concepts and fields.
 - [schema/cmp.schema.json](schema/cmp.schema.json) provides a draft JSON Schema for CMP documents.
 - [examples/](examples/) contains illustrative YAML examples.
+
+## GitHub Pages
+
+The documentation site is published from [docs/](docs/) using GitHub Pages.
+
+If the site does not deploy automatically, GitHub Pages may need to be enabled in the repository settings with GitHub Actions selected as the source.
 
 ## Licensing
 
