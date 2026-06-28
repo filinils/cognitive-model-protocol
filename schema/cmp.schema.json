@@ -15,8 +15,6 @@
     "collaboration_model",
     "hypotheses",
     "interaction_patterns",
-    "matching_signals",
-    "complementarity_signals",
     "revision_history",
     "user_controls"
   ],
@@ -83,18 +81,6 @@
         "$ref": "#/$defs/model_signal"
       }
     },
-    "matching_signals": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/model_signal"
-      }
-    },
-    "complementarity_signals": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/model_signal"
-      }
-    },
     "revision_history": {
       "type": "array",
       "items": {
@@ -105,14 +91,20 @@
       "type": "object",
       "required": [
         "inspectable",
+        "challengeable",
+        "correctable",
         "exportable",
-        "deletable",
-        "challenge_mechanism",
-        "correction_mechanism"
+        "deletable"
       ],
       "additionalProperties": false,
       "properties": {
         "inspectable": {
+          "type": "boolean"
+        },
+        "challengeable": {
+          "type": "boolean"
+        },
+        "correctable": {
           "type": "boolean"
         },
         "exportable": {
@@ -120,12 +112,6 @@
         },
         "deletable": {
           "type": "boolean"
-        },
-        "challenge_mechanism": {
-          "type": "string"
-        },
-        "correction_mechanism": {
-          "type": "string"
         }
       }
     }
@@ -159,8 +145,6 @@
           "type": "string",
           "enum": [
             "interaction_pattern",
-            "matching_signal",
-            "complementarity_signal",
             "constraint",
             "preference",
             "risk",
@@ -239,7 +223,6 @@
             "correction",
             "evaluation",
             "external_reference",
-            "implementation_trace",
             "other"
           ]
         },

@@ -21,8 +21,6 @@ A CMP document has the following root fields:
 - `collaboration_model`
 - `hypotheses`
 - `interaction_patterns`
-- `matching_signals`
-- `complementarity_signals`
 - `revision_history`
 - `user_controls`
 
@@ -56,8 +54,6 @@ Required fields:
 Current draft `type` values:
 
 - `interaction_pattern`
-- `matching_signal`
-- `complementarity_signal`
 - `constraint`
 - `preference`
 - `risk`
@@ -94,26 +90,9 @@ Current draft `source_type` values:
 - `correction`
 - `evaluation`
 - `external_reference`
-- `implementation_trace`
 - `other`
 
 ## `interaction_patterns[]`
-
-Required fields:
-
-- `id`
-- `description`
-- `related_hypotheses`
-
-## `matching_signals`
-
-Required fields:
-
-- `id`
-- `description`
-- `related_hypotheses`
-
-## `complementarity_signals`
 
 Required fields:
 
@@ -135,10 +114,10 @@ Required fields:
 Required fields:
 
 - `inspectable`
+- `challengeable`
+- `correctable`
 - `exportable`
 - `deletable`
-- `challenge_mechanism`
-- `correction_mechanism`
 
 ## Examples
 

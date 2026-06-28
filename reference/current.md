@@ -2,9 +2,9 @@
 
 ## Purpose
 
-The Cognitive Model Protocol (CMP) is an experimental protocol for representing evidence-based working models of human-AI collaboration.
+The Cognitive Model Protocol (CMP) is an experimental interoperability protocol for representing evidence-based working models of human-AI collaboration.
 
-CMP exists to make collaboration models explicit, inspectable, uncertainty-aware, revisable, and portable. It is intended for situations where an AI system forms or uses assumptions about how collaboration with a user may work better.
+CMP exists so independent AI systems can exchange explicit, inspectable, uncertainty-aware, revisable, and portable collaboration models. It is intended for situations where an AI system forms or uses assumptions about how collaboration with a user may work better.
 
 CMP models collaboration with a user. It does not model the user's identity.
 
@@ -57,7 +57,7 @@ A hypothesis should be specific enough to inspect, challenge, and revise. It sho
 
 Evidence records why a hypothesis exists.
 
-Evidence may include user statements, interaction traces, artifacts, corrections, evaluations, implementation traces, or external references. Evidence should preserve enough context to distinguish a direct user statement from an inference made by a system.
+Evidence may include user statements, interaction records, artifacts, corrections, evaluations, or external references. Evidence should preserve enough context to distinguish a direct user statement from an inference made by a system.
 
 Evidence does not prove a hypothesis. It records support, qualification, or contradiction.
 
@@ -103,11 +103,18 @@ CMP does not attempt to:
 - Model who a person is.
 - Diagnose users.
 - Create a personality test.
+- Define a psychological theory.
+- Define an identity system.
+- Define a recommendation engine.
 - Create advertising profiles.
 - Create hidden risk scores.
 - Standardize surveillance profiles.
+- Define a framework.
+- Define an SDK.
+- Define an API.
+- Define an MCP server.
 - Replace consent, privacy law, or data governance.
-- Define an AI memory implementation.
+- Define an AI memory system.
 - Require any particular software system.
 - Claim that AI systems understand consciousness or personhood.
 

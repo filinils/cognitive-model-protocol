@@ -48,7 +48,7 @@ hypotheses:
     updated_at: "2026-06-28T00:00:00Z"
   - id: hyp-003
     statement: The collaborator values feedback loops and responds well to constructive resistance.
-    type: matching_signal
+    type: interaction_pattern
     evidence:
       - id: ev-003
         description: The fictional source material frames challenge, critique, and falsifiability as useful parts of collaboration.
@@ -65,7 +65,7 @@ hypotheses:
     updated_at: "2026-06-28T00:00:00Z"
   - id: hyp-004
     statement: The collaboration may benefit from complementary partners who test and operationalize abstract ideas.
-    type: complementarity_signal
+    type: other
     evidence:
       - id: ev-004
         description: The fictional example includes a need for collaborators who can turn abstract synthesis into implementation checks, tests, and next actions.
@@ -90,17 +90,15 @@ interaction_patterns:
     description: Uses feedback loops and critique to refine models.
     related_hypotheses:
       - hyp-003
-matching_signals:
-  - id: ms-001
+  - id: ip-003
     description: Constructive resistance is useful when it is specific, evidence-based, and oriented toward improving the model.
     related_hypotheses:
       - hyp-003
-  - id: ms-002
+  - id: ip-004
     description: Collaboration works best when uncertainty and open questions remain visible during synthesis.
     related_hypotheses:
       - hyp-002
-complementarity_signals:
-  - id: cs-001
+  - id: ip-005
     description: Complementary collaborators should test abstractions, identify edge cases, and translate models into concrete steps.
     related_hypotheses:
       - hyp-004
@@ -111,7 +109,7 @@ revision_history:
     description: Created illustrative fictional systems-synthesist example.
 user_controls:
   inspectable: true
+  challengeable: true
+  correctable: true
   exportable: true
   deletable: true
-  challenge_mechanism: The user can challenge any hypothesis, evidence item, or inferred signal.
-  correction_mechanism: Corrections should update affected hypotheses and preserve a revision record.

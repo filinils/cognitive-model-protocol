@@ -86,7 +86,7 @@ It is draft 0.1. It is not a standard. It is not a claim that the problem has be
 
 CMP proposes a root object called `collaboration_model`, not `user_profile`. That naming choice is central. A `user_profile` implies that the object describes the user. A `collaboration_model` implies that the object describes provisional working hypotheses about the collaboration between a user, a system, a context, and a purpose.
 
-In CMP, model elements are hypotheses. A hypothesis has a statement, evidence, confidence, uncertainty, falsifiers, status, and timestamps. Evidence has a source type, description, strength, and timestamp. The model also includes interaction patterns, matching signals, complementarity signals, revision history, and user controls.
+In CMP, model elements are hypotheses. A hypothesis has a statement, evidence, confidence, uncertainty, falsifiers, status, and timestamps. Evidence has a source type, description, strength, and timestamp. The model also includes interaction patterns, revision history, and user controls.
 
 The aim is practical rather than metaphysical. CMP does not try to solve identity, personality, consciousness, or diagnosis. It asks a narrower question: if AI systems are already forming working models during collaboration, can those models be made more explicit, accountable, revisable, and portable?
 

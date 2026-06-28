@@ -1,6 +1,6 @@
 # Cognitive Model Protocol (CMP)
 
-CMP is an experimental protocol for representing evidence-based working models of human-AI collaboration.
+CMP is an experimental interoperability protocol for representing evidence-based working models of human-AI collaboration.
 
 Current status: `0.1.0-draft`, seeking criticism.
 

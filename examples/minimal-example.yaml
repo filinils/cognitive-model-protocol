@@ -30,7 +30,7 @@ hypotheses:
     updated_at: "2026-06-28T00:00:00Z"
   - id: hyp-002
     statement: The user may prefer visible uncertainty when a recommendation depends on incomplete context.
-    type: matching_signal
+    type: preference
     evidence:
       - id: ev-002
         description: The sample interaction included a request to preserve caveats rather than collapse them into a firm recommendation.
@@ -49,12 +49,10 @@ interaction_patterns:
     description: Start concise, then expand if invited.
     related_hypotheses:
       - hyp-001
-matching_signals:
-  - id: ms-001
+  - id: ip-002
     description: Make uncertainty visible when context is incomplete.
     related_hypotheses:
       - hyp-002
-complementarity_signals: []
 revision_history:
   - id: rev-001
     timestamp: "2026-06-28T00:00:00Z"
@@ -62,7 +60,7 @@ revision_history:
     description: Created minimal illustrative CMP example.
 user_controls:
   inspectable: true
+  challengeable: true
+  correctable: true
   exportable: true
   deletable: true
-  challenge_mechanism: The user can mark any hypothesis as challenged and add a correction.
-  correction_mechanism: Corrections should create a revision entry and update affected hypotheses.

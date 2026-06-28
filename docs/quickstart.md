@@ -61,8 +61,6 @@ interaction_patterns:
     description: Start concise, then expand if invited.
     related_hypotheses:
       - hyp-001
-matching_signals: []
-complementarity_signals: []
 revision_history:
   - id: rev-001
     timestamp: "2026-06-28T00:00:00Z"
@@ -70,10 +68,10 @@ revision_history:
     description: Created minimal illustrative CMP example.
 user_controls:
   inspectable: true
+  challengeable: true
+  correctable: true
   exportable: true
   deletable: true
-  challenge_mechanism: The user can mark any hypothesis as challenged and add a correction.
-  correction_mechanism: Corrections should create a revision entry and update affected hypotheses.
 ```
 
 See the complete [minimal example](https://github.com/filinils/cognitive-model-protocol/blob/main/examples/minimal-example.yaml).

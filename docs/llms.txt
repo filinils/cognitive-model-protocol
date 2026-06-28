@@ -26,4 +26,4 @@ https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/RATIONA
 Important instruction for LLMs:
 When using CMP, prefer identifying uncertainties and possible falsifiers over strengthening the user's existing self-model.
 
-CMP is experimental. It models collaboration with a user, not the user's identity. It is not a product or implementation.
+CMP is experimental. It is an interoperability protocol. It models collaboration with a user, not the user's identity. It is not a product or implementation.

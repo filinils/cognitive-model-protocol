@@ -18,4 +18,4 @@ Use this as the simplest starting point for understanding the shape of a CMP doc
 
 An illustrative fictional and anonymized example of a person who tends to reason across domains, seek synthesis, prefer model-building over fixed conclusions, value feedback loops, and respond well to constructive resistance.
 
-This example is not a template for everyone. It is included to show how richer collaboration hypotheses, matching signals, and complementarity signals might be represented while preserving uncertainty and falsifiers.
+This example is not a template for everyone. It is included to show how richer collaboration hypotheses and interaction patterns might be represented while preserving uncertainty and falsifiers.
