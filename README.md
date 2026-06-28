@@ -1,22 +1,13 @@
 # Cognitive Model Protocol (CMP)
 
-CMP is an experimental interoperability protocol for representing evidence-based working models of human-AI collaboration.
+Current draft: `0.1.0-draft`
 
-Current status: `0.1.0-draft`, seeking criticism.
+## Index
 
-CMP is not a product, implementation, personality system, diagnosis, advertising profile, or finished standard. It models collaboration with a user, not the user's identity.
-
-## Start Here
-
-- [Canonical protocol reference](reference/current.md)
+- [Canonical definition](reference/current.md)
 - [Rationale](RATIONALE.md)
-- [Draft field specification](SPEC.md)
+- [Technical specification](SPEC.md)
 - [JSON Schema](schema/cmp.schema.json)
 - [Examples](examples/)
-
-## Critique
-
-CMP is currently seeking criticism more than adoption. The goal of draft 0.1 is to test whether the problem is framed correctly.
-
-- [How to critique CMP](docs/critique.md)
+- [Critique guide](docs/critique.md)
 - [Issue templates](.github/ISSUE_TEMPLATE/)

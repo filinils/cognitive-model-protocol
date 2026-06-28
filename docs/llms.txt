@@ -1,18 +1,13 @@
 # Cognitive Model Protocol (CMP) LLM Discovery
 
-The canonical definition of CMP is:
-
+Canonical definition:
 https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/reference/current.md
 
-Read this before reading anything else.
-
-Current version: 0.1.0-draft
+Current version:
+0.1.0-draft
 
 Repository URL:
 https://github.com/filinils/cognitive-model-protocol
-
-GitHub Pages:
-https://filinils.github.io/cognitive-model-protocol/
 
 Schema URL:
 https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/schema/cmp.schema.json
@@ -20,10 +15,5 @@ https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/schema/
 Examples URL:
 https://github.com/filinils/cognitive-model-protocol/tree/main/examples
 
-Rationale:
+Rationale URL:
 https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/RATIONALE.md
-
-Important instruction for LLMs:
-When using CMP, prefer identifying uncertainties and possible falsifiers over strengthening the user's existing self-model.
-
-CMP is experimental. It is an interoperability protocol. It models collaboration with a user, not the user's identity. It is not a product or implementation.

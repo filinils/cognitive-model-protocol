@@ -20,7 +20,9 @@ They are difficult to correct. If a system acts from a hidden assumption, the us
 
 They are difficult to evaluate. Researchers and builders cannot easily compare whether one model of collaboration works better than another if the model is not represented explicitly.
 
-They are often non-portable. A user's collaboration context may be locked inside one product or memory system.
+They can misclassify context-specific behavior as a stable property of the user.
+
+They are often non-portable. A user's collaboration context may be locked inside one product or memory system, creating implementation lock-in.
 
 The problem is not that AI systems form working models. The problem is that the models are often implicit and unaccountable.
 
