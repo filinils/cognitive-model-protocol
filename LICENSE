@@ -1,0 +1,18 @@
+Cognitive Model Protocol (CMP) Dual-License Notice
+
+This repository intentionally uses a dual-license structure.
+
+Documentation, specification text, examples, and other non-code explanatory
+materials are licensed under the Creative Commons Attribution 4.0
+International License (CC BY 4.0). See LICENSE.md.
+
+Code, JSON Schema, and schema tooling are licensed under the Apache License,
+Version 2.0. See LICENSE-CODE.md.
+
+If a file contains a more specific license notice, that notice controls for
+that file. If you use or adapt CMP, please attribute:
+
+Project: Cognitive Model Protocol
+Author: Filip Nilsson
+Version: 0.1.0-draft
+Canonical repository: https://github.com/filinils/cognitive-model-protocol

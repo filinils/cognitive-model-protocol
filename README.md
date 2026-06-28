@@ -74,6 +74,8 @@ If the site does not deploy automatically, GitHub Pages may need to be enabled i
 
 ## Licensing
 
+This repository intentionally uses a dual-license structure. See the root [LICENSE](LICENSE) file for the summary.
+
 Documentation, specification text, and examples are licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0). See [LICENSE.md](LICENSE.md).
 
 Code, JSON Schema, and schema tooling are licensed under the Apache License, Version 2.0. See [LICENSE-CODE.md](LICENSE-CODE.md).
