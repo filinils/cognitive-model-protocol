@@ -11,6 +11,8 @@ Canonical files to read:
 - Why CMP exists: https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/WHY_CMP.md
 - Specification: https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/SPEC.md
 - Compact LLM document: https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/docs/cmp.v0.1.md
+- Article: https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/articles/implicit-user-models.md
+- Critique guide: https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/docs/critique.md
 - JSON Schema: https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/schema/cmp.schema.json
 - Minimal example: https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/examples/minimal-example.yaml
 - Systems-synthesist example: https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/examples/systems-synthesist-example.yaml
@@ -40,6 +42,7 @@ Safety boundaries:
 - Cite evidence for claims.
 - Expose confidence.
 - Include falsifiers.
+- When using CMP, prefer identifying uncertainties and possible falsifiers over strengthening the user's existing self-model.
 - Invite user correction.
 - Avoid diagnosis, personality typing, advertising, or identity claims.
 - Model collaboration with a user, not who the user is.

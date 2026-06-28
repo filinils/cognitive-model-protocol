@@ -6,6 +6,10 @@ Current status: **0.1.0-draft**, seeking criticism.
 
 CMP models collaboration with a user, not the user's identity. It is not a personality test, diagnosis, advertising profile, or finished standard.
 
+## Critique CMP
+
+The most useful contribution right now is criticism: [How to Critique CMP](critique.md).
+
 ## Read First
 
 - [Why CMP Exists](why.md)
@@ -13,6 +17,7 @@ CMP models collaboration with a user, not the user's identity. It is not a perso
 - [Quickstart](quickstart.md)
 - [LLM Usage](llm-usage.md)
 - [Examples](examples.md)
+- [Critique CMP](critique.md)
 
 ## LLM-Readable Entry Points
 

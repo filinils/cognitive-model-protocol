@@ -1,0 +1,41 @@
+name: Real-world use case
+description: Describe a practical context where CMP may or may not fit.
+title: "[Use case]: "
+labels:
+  - use-case
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What real-world use case should CMP consider?
+    validations:
+      required: true
+  - type: input
+    id: relevant-cmp-section
+    attributes:
+      label: Relevant CMP section
+      description: Link or name the section, file, or schema field.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence-or-example
+    attributes:
+      label: Evidence or example
+      description: Describe the product, workflow, research setting, or interaction pattern.
+    validations:
+      required: true
+  - type: textarea
+    id: why-it-matters
+    attributes:
+      label: Why it matters
+      description: Explain what this use case reveals about CMP's scope or limits.
+    validations:
+      required: true
+  - type: textarea
+    id: suggested-change
+    attributes:
+      label: Suggested change, if any
+      description: Suggest changes to the protocol, examples, docs, or boundaries.
+    validations:
+      required: false

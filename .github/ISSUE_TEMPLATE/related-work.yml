@@ -1,0 +1,41 @@
+name: Related research
+description: Share related research, standards, formats, critiques, or prior art.
+title: "[Related work]: "
+labels:
+  - related-work
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What research, standard, project, or prior work should CMP engage with?
+    validations:
+      required: true
+  - type: input
+    id: relevant-cmp-section
+    attributes:
+      label: Relevant CMP section
+      description: Link or name the section, file, or schema field.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence-or-example
+    attributes:
+      label: Evidence or example
+      description: Provide links, citations, examples, or a short explanation.
+    validations:
+      required: true
+  - type: textarea
+    id: why-it-matters
+    attributes:
+      label: Why it matters
+      description: Explain how this work should affect CMP's framing, schema, or boundaries.
+    validations:
+      required: true
+  - type: textarea
+    id: suggested-change
+    attributes:
+      label: Suggested change, if any
+      description: Suggest additions to docs, citations, schema, examples, or terminology.
+    validations:
+      required: false

@@ -1,0 +1,42 @@
+name: Problem with core assumption
+description: Challenge a foundational assumption in CMP.
+title: "[Core assumption]: "
+labels:
+  - critique
+  - core-assumption
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What core assumption are you challenging?
+    validations:
+      required: true
+  - type: input
+    id: relevant-cmp-section
+    attributes:
+      label: Relevant CMP section
+      description: Link or name the section, file, or schema field.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence-or-example
+    attributes:
+      label: Evidence or example
+      description: Provide evidence, a concrete example, or a scenario that illustrates the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: why-it-matters
+    attributes:
+      label: Why it matters
+      description: Explain the consequence for the protocol, users, or implementations.
+    validations:
+      required: true
+  - type: textarea
+    id: suggested-change
+    attributes:
+      label: Suggested change, if any
+      description: Suggest a change or say if you are only raising the concern.
+    validations:
+      required: false

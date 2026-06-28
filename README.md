@@ -59,12 +59,18 @@ Draft 0.1.0 — seeking criticism.
 
 The project is early. The goal is to invite critique before expanding scope or treating the format as stable.
 
+## Current need: criticism
+
+CMP is currently seeking criticism more than adoption. The goal of draft 0.1 is to test whether the problem is framed correctly.
+
 ## Documents
 
 - [WHY_CMP.md](WHY_CMP.md) explains why CMP exists and what risks it is trying to address.
 - [SPEC.md](SPEC.md) defines the 0.1.0-draft protocol concepts and fields.
 - [schema/cmp.schema.json](schema/cmp.schema.json) provides a draft JSON Schema for CMP documents.
 - [examples/](examples/) contains illustrative YAML examples.
+- [articles/implicit-user-models.md](articles/implicit-user-models.md) introduces the problem CMP is trying to address.
+- [docs/critique.md](docs/critique.md) explains how to critique CMP and where the draft may fail.
 
 ## GitHub Pages
 

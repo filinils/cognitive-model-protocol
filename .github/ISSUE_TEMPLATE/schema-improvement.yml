@@ -1,0 +1,42 @@
+name: Schema improvement
+description: Suggest a change to the CMP schema or data model.
+title: "[Schema]: "
+labels:
+  - schema
+  - improvement
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What schema or data model change are you proposing?
+    validations:
+      required: true
+  - type: input
+    id: relevant-cmp-section
+    attributes:
+      label: Relevant CMP section
+      description: Link or name the section, file, or schema field.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence-or-example
+    attributes:
+      label: Evidence or example
+      description: Show the limitation, example data, or implementation need.
+    validations:
+      required: true
+  - type: textarea
+    id: why-it-matters
+    attributes:
+      label: Why it matters
+      description: Explain what this change would make possible or safer.
+    validations:
+      required: true
+  - type: textarea
+    id: suggested-change
+    attributes:
+      label: Suggested change, if any
+      description: Propose field names, constraints, examples, or alternatives.
+    validations:
+      required: false

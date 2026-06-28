@@ -1,0 +1,42 @@
+name: Negative result
+description: Report a case where CMP does not work, is harmful, or adds little value.
+title: "[Negative result]: "
+labels:
+  - negative-result
+  - critique
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What failed, did not help, or made things worse?
+    validations:
+      required: true
+  - type: input
+    id: relevant-cmp-section
+    attributes:
+      label: Relevant CMP section
+      description: Link or name the section, file, or schema field.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence-or-example
+    attributes:
+      label: Evidence or example
+      description: Provide the negative result, test case, observation, or scenario.
+    validations:
+      required: true
+  - type: textarea
+    id: why-it-matters
+    attributes:
+      label: Why it matters
+      description: Explain what this result suggests about CMP's assumptions or design.
+    validations:
+      required: true
+  - type: textarea
+    id: suggested-change
+    attributes:
+      label: Suggested change, if any
+      description: Suggest a change, narrower scope, warning, or removal if appropriate.
+    validations:
+      required: false
