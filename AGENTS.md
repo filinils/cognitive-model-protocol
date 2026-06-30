@@ -14,8 +14,10 @@ CMP models the collaboration context. It does not classify the person.
 4. `schema/cmp.schema.json` for validation.
 5. `examples/minimal-example.yaml` for a minimal CMP document.
 6. `examples/systems-synthesist-example.yaml` for a larger illustrative example.
-7. `RATIONALE.md` for why CMP exists.
-8. `docs/critique.md` for how to challenge the protocol.
+7. `schema/cmp-conformance.schema.json` for conformance disclosure validation.
+8. `examples/conformance-disclosure-example.json` for a worked conformance disclosure.
+9. `RATIONALE.md` for why CMP exists.
+10. `docs/critique.md` for how to challenge the protocol.
 
 Use `docs/llms.txt` only as a compact LLM discovery note. Do not treat it as the protocol definition.
 
@@ -56,6 +58,12 @@ When producing CMP documents:
 2. Validate against `schema/cmp.schema.json`.
 3. Compare structure against `examples/minimal-example.yaml`.
 4. Preserve required fields for hypotheses: `evidence`, `confidence`, `uncertainty`, and `falsifiers`.
+
+When producing conformance disclosures:
+
+1. Read the conformance section in `reference/current.md`.
+2. Validate against `schema/cmp-conformance.schema.json`.
+3. Compare structure against `examples/conformance-disclosure-example.json`.
 
 ## Safe usage boundaries
 

@@ -1,4 +1,4 @@
-protocol_version: 0.1.0-draft
+protocol_version: 0.2.0-draft
 model_id: cmp-example-systems-synthesist
 subject_ref: fictional-anonymized-subject
 model_purpose: Illustrate a collaboration model for a fictional person who tends to reason across domains.
@@ -15,10 +15,12 @@ hypotheses:
   - id: hyp-001
     statement: The collaborator often reasons across domains and looks for structural similarities between problems.
     type: interaction_pattern
+    origin: inferred
     evidence:
       - id: ev-001
         description: In the fictional source material, the collaborator repeatedly connected design, governance, cognition, and implementation concerns.
         source_type: artifact
+        source_ref: urn:cmp-example:systems-synthesist:artifact:001
         strength: 0.7
         timestamp: "2026-06-28T00:00:00Z"
     confidence: 0.68
@@ -32,10 +34,12 @@ hypotheses:
   - id: hyp-002
     statement: The collaborator tends to seek synthesis and model-building before settling on fixed conclusions.
     type: interaction_pattern
+    origin: inferred
     evidence:
       - id: ev-002
         description: The fictional example emphasizes iterating on models and preserving open questions during concept formation.
         source_type: artifact
+        source_ref: urn:cmp-example:systems-synthesist:artifact:002
         strength: 0.75
         timestamp: "2026-06-28T00:00:00Z"
     confidence: 0.72
@@ -49,10 +53,12 @@ hypotheses:
   - id: hyp-003
     statement: The collaborator values feedback loops and responds well to constructive resistance.
     type: interaction_pattern
+    origin: inferred
     evidence:
       - id: ev-003
         description: The fictional source material frames challenge, critique, and falsifiability as useful parts of collaboration.
         source_type: artifact
+        source_ref: urn:cmp-example:systems-synthesist:artifact:003
         strength: 0.65
         timestamp: "2026-06-28T00:00:00Z"
     confidence: 0.64
@@ -66,10 +72,12 @@ hypotheses:
   - id: hyp-004
     statement: The collaboration may benefit from complementary partners who test and operationalize abstract ideas.
     type: other
+    origin: inferred
     evidence:
       - id: ev-004
         description: The fictional example includes a need for collaborators who can turn abstract synthesis into implementation checks, tests, and next actions.
         source_type: artifact
+        source_ref: urn:cmp-example:systems-synthesist:artifact:004
         strength: 0.7
         timestamp: "2026-06-28T00:00:00Z"
     confidence: 0.66

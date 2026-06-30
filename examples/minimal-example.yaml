@@ -1,4 +1,4 @@
-protocol_version: 0.1.0-draft
+protocol_version: 0.2.0-draft
 model_id: cmp-example-minimal
 subject_ref: local-user-001
 model_purpose: Explore a small collaboration model for drafting and revision.
@@ -14,10 +14,12 @@ hypotheses:
   - id: hyp-001
     statement: The collaboration may improve when the assistant offers a concise first draft before expanding detail.
     type: interaction_pattern
+    origin: inferred
     evidence:
       - id: ev-001
         description: In a sample drafting task, the user asked for a concise version before exploring alternatives.
         source_type: interaction_trace
+        source_ref: urn:cmp-example:minimal:interaction:001
         strength: 0.5
         timestamp: "2026-06-28T00:00:00Z"
     confidence: 0.45
@@ -31,10 +33,12 @@ hypotheses:
   - id: hyp-002
     statement: The user may prefer visible uncertainty when a recommendation depends on incomplete context.
     type: preference
+    origin: mixed
     evidence:
       - id: ev-002
         description: The sample interaction included a request to preserve caveats rather than collapse them into a firm recommendation.
         source_type: user_statement
+        source_ref: urn:cmp-example:minimal:statement:002
         strength: 0.6
         timestamp: "2026-06-28T00:00:00Z"
     confidence: 0.55

@@ -2,7 +2,7 @@
 
 CMP is an experimental interoperability protocol for explicit, evidence-based, uncertainty-aware, revisable collaboration models between humans and AI systems.
 
-Current draft: `0.1.0-draft`
+Current draft: `0.2.0-draft`
 
 ## For agents and LLMs
 
@@ -18,6 +18,7 @@ Current draft: `0.1.0-draft`
 - [Rationale](RATIONALE.md)
 - [Technical specification](SPEC.md)
 - [JSON Schema](schema/cmp.schema.json)
+- [Conformance disclosure schema](schema/cmp-conformance.schema.json)
 - [Examples](examples/)
 - [Critique guide](docs/critique.md)
 - [Agent entrypoint](AGENTS.md)

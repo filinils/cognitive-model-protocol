@@ -10,7 +10,7 @@ Attribution should include:
 
 - Project: Cognitive Model Protocol
 - Author: Filip Nilsson
-- Version: 0.1.0-draft
+- Version: 0.2.0-draft
 - Canonical repository: https://github.com/filinils/cognitive-model-protocol
 
 The full license text is available at:

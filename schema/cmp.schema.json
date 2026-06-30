@@ -22,7 +22,7 @@
   "properties": {
     "protocol_version": {
       "type": "string",
-      "const": "0.1.0-draft"
+      "const": "0.2.0-draft"
     },
     "model_id": {
       "type": "string",
@@ -153,6 +153,14 @@
             "other"
           ]
         },
+        "origin": {
+          "type": "string",
+          "enum": [
+            "user-stated",
+            "inferred",
+            "mixed"
+          ]
+        },
         "evidence": {
           "type": "array",
           "minItems": 1,
@@ -225,6 +233,10 @@
             "external_reference",
             "other"
           ]
+        },
+        "source_ref": {
+          "type": "string",
+          "description": "An opaque provenance pointer or URI for the evidence source. This field should reference evidence without embedding private content."
         },
         "strength": {
           "type": "number",

@@ -1,5 +1,5 @@
 protocol: cognitive-model-protocol
-version: 0.1.0-draft
+version: 0.2.0-draft
 status: experimental
 entrypoints:
   human: README.md
@@ -9,10 +9,12 @@ entrypoints:
   rationale: RATIONALE.md
   spec: SPEC.md
   schema: schema/cmp.schema.json
+  conformance_schema: schema/cmp-conformance.schema.json
   critique: docs/critique.md
   examples:
     minimal: examples/minimal-example.yaml
     systems_synthesist: examples/systems-synthesist-example.yaml
+    conformance_disclosure: examples/conformance-disclosure-example.json
 purpose: >
   Represent explicit, evidence-based, uncertainty-aware working models
   of human-AI collaboration.
@@ -38,6 +40,8 @@ boundaries:
   model_scope: collaboration_context_not_person_identity
 validation:
   schema: schema/cmp.schema.json
+  conformance_schema: schema/cmp-conformance.schema.json
   examples:
     - examples/minimal-example.yaml
     - examples/systems-synthesist-example.yaml
+    - examples/conformance-disclosure-example.json

@@ -9,7 +9,7 @@ Read the canonical protocol definition first: [reference/current.md](https://git
 Start with a stable model ID, purpose, timestamps, and a privacy-preserving subject reference.
 
 ```yaml
-protocol_version: 0.1.0-draft
+protocol_version: 0.2.0-draft
 model_id: cmp-example-minimal
 subject_ref: local-user-001
 model_purpose: Explore a small collaboration model for drafting and revision.
@@ -38,10 +38,12 @@ hypotheses:
   - id: hyp-001
     statement: The collaboration may improve when the assistant offers a concise first draft before expanding detail.
     type: interaction_pattern
+    origin: inferred
     evidence:
       - id: ev-001
         description: In a sample drafting task, the user asked for a concise version before exploring alternatives.
         source_type: interaction_trace
+        source_ref: urn:cmp-example:minimal:interaction:001
         strength: 0.5
         timestamp: "2026-06-28T00:00:00Z"
     confidence: 0.45

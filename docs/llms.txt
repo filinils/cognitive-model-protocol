@@ -9,7 +9,7 @@ Start here:
 5. `schema/cmp.schema.json`
 6. `examples/`
 
-Current version: `0.1.0-draft`
+Current version: `0.2.0-draft`
 
 Repository URL:
 https://github.com/filinils/cognitive-model-protocol
@@ -26,6 +26,9 @@ https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/referen
 Schema:
 https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/schema/cmp.schema.json
 
+Conformance disclosure schema:
+https://raw.githubusercontent.com/filinils/cognitive-model-protocol/main/schema/cmp-conformance.schema.json
+
 Examples:
 https://github.com/filinils/cognitive-model-protocol/tree/main/examples
 
@@ -40,3 +43,4 @@ Operational rules:
 - Use evidence, confidence, uncertainty, and falsifiers for CMP model statements.
 - Treat Anchor Memory as a possible implementation or consumer, not the protocol owner.
 - Validate CMP documents against `schema/cmp.schema.json`.
+- Validate conformance disclosures against `schema/cmp-conformance.schema.json`.

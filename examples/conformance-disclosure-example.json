@@ -1,0 +1,17 @@
+{
+  "protocolVersion": "0.2.0-draft",
+  "claimedLevel": "L2",
+  "claimedExtensions": [
+    {
+      "id": "ext:matching",
+      "version": "0.1"
+    }
+  ],
+  "attestation": {
+    "type": "self-declared",
+    "assertedBy": "Example CMP implementation",
+    "assertedAt": "2026-06-30T00:00:00Z"
+  },
+  "contactUrl": "https://example.org/contact",
+  "sourceUrl": "https://example.org/cmp-conformance"
+}

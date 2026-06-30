@@ -132,6 +132,121 @@ Users should be able to inspect, challenge, correct, export, and delete collabor
 
 When using CMP, prefer identifying uncertainty and possible falsifiers over strengthening a user's existing self-model.
 
+## Conformance
+
+The key words "MUST", "MUST NOT", "SHOULD", "SHOULD NOT", and "MAY" in this section are to be interpreted as described in RFC 2119 and RFC 8174.
+
+CMP conformance is defined as a non-relaxable Floor plus optional capability levels above that Floor. Capability levels grade completeness of implementation. They do not grade how much of the Floor is met.
+
+An implementation MUST satisfy the entire Floor to claim CMP conformance at any level or with any extension.
+
+### Conformance Floor
+
+The Conformance Floor applies to every CMP implementation, every conformance level, and every extension.
+
+An implementation claiming CMP conformance:
+
+- MUST allow the subject to inspect, export, and delete their collaboration model.
+- MUST make the model, confidence values, and uncertainty inspectable by the subject.
+- MUST NOT perform hidden or covert scoring of the subject.
+- MUST describe how to collaborate with the subject.
+- MUST NOT model who the subject is.
+- MUST NOT diagnose the subject.
+- MUST attach an explicit falsifier to each claim.
+- MUST favor surfacing uncertainty over reinforcing the subject's self-image.
+- MUST NOT use CMP for covert profiling or manipulation.
+- MUST NOT derive or store medical, political, religious, sexual, ethnic, neurotype, or other protected or sensitive attributes.
+- MUST NOT accumulate stored conclusions about named third parties.
+
+The Floor is all-or-nothing. An implementation that fails any Floor requirement MUST NOT claim CMP conformance.
+
+### Conformance Levels
+
+Each conformance level includes the entire Floor plus all lower levels.
+
+#### L1: Core
+
+An L1 implementation:
+
+- MUST represent structured, revisable hypotheses.
+- MUST include confidence, uncertainty, and a falsifier for each hypothesis.
+- MUST make the collaboration model inspectable by the subject.
+
+#### L2: Accountable
+
+An L2 implementation includes L1 and:
+
+- MUST maintain revision history over time.
+- MUST represent evidence using provenance pointers rather than embedded private content.
+- MUST distinguish user-stated claims from inferred claims.
+- MUST provide portable export.
+
+#### L3: Interoperable
+
+An L3 implementation includes L2 and:
+
+- MUST provide a machine-readable, versioned, portable CMP document.
+- MUST identify the CMP protocol version used.
+- MUST produce a document another conformant implementation or agent can consume.
+
+### Conformance Disclosure
+
+An implementation claiming CMP conformance SHOULD publish a machine-readable conformance disclosure.
+
+The recommended location is:
+
+```text
+/.well-known/cmp-conformance.json
+```
+
+The disclosure MUST state:
+
+- `protocolVersion`
+- `claimedLevel`, one of `L1`, `L2`, or `L3`
+- `claimedExtensions`, as an array of extension identifiers and versions
+- `attestation`
+- `contactUrl`
+- `sourceUrl`
+
+Conformance MAY be self-declared. The disclosure format is designed so third-party assessment or certification can be added later without breaking existing disclosures.
+
+The conformance disclosure schema is `schema/cmp-conformance.schema.json`.
+
+### Extensions
+
+A CMP extension is a named, versioned, optional capability outside core CMP scope.
+
+An extension:
+
+- MUST honor the entire Conformance Floor.
+- MUST declare any requirements it imposes beyond the Floor.
+- MUST be declared independently in the conformance disclosure by identifier and version.
+- MUST specify requirements, not product logic or implementation algorithms.
+- MUST NOT pull product, engine, recommender, or matching logic into the core protocol.
+
+Extensions extend capability. They do not weaken CMP conformance.
+
+### Extension: `ext:matching` v0.1
+
+`ext:matching` v0.1 defines requirements for implementations that use CMP material to propose collaboration matches.
+
+CMP itself defines no matching algorithm, recommender system, ranking system, compatibility score, or matching engine.
+
+An implementation claiming `ext:matching` v0.1:
+
+- MUST require a separate, explicit opt-in before adding a subject to a matching pool.
+- MUST NOT enroll a subject in matching merely because a model is published, hosted, exported, or imported.
+- MUST match on collaboration patterns, including complementary collaboration patterns.
+- MUST NOT match on identity or protected attributes.
+- MUST NOT reveal one subject's model to another party without that subject's explicit consent.
+- MUST require double opt-in before connecting two parties.
+- MUST provide an inspectable, falsifiable rationale for any proposed match.
+- MUST identify which collaboration patterns are relevant to the proposed match and why they are complementary.
+- MUST allow the subject to contest or dismiss a proposed match.
+- MUST NOT publish a global ranking of people.
+- MUST NOT reduce a match to a single hidden compatibility number.
+- MUST allow the subject to leave the matching pool at any time.
+
 ## Relationship to Implementations
 
 CMP is a protocol-level reference.
@@ -144,6 +259,6 @@ The protocol should remain independent of any single product, memory system, age
 
 ## Version
 
-Current draft version: `0.1.0-draft`.
+Current draft version: `0.2.0-draft`.
 
 This is an experimental draft seeking criticism. It should not be treated as a finished standard.

@@ -1,6 +1,6 @@
 # CMP Draft Field Specification
 
-Version: 0.1.0-draft  
+Version: 0.2.0-draft
 Author: Filip Nilsson  
 Project: Cognitive Model Protocol
 
@@ -26,6 +26,15 @@ A CMP document has the following root fields:
 
 The draft JSON Schema is [schema/cmp.schema.json](schema/cmp.schema.json).
 
+## Conformance
+
+Normative conformance requirements are defined in [reference/current.md](reference/current.md).
+
+Conformance disclosure support files:
+
+- [schema/cmp-conformance.schema.json](schema/cmp-conformance.schema.json)
+- [examples/conformance-disclosure-example.json](examples/conformance-disclosure-example.json)
+
 ## `collaboration_model`
 
 Required fields:
@@ -41,6 +50,7 @@ Required fields:
 - `id`
 - `statement`
 - `type`
+- `origin`
 - `evidence`
 - `confidence`
 - `uncertainty`
@@ -50,6 +60,12 @@ Required fields:
 - `updated_at`
 
 `confidence` is a number between 0 and 1.
+
+`origin` is optional in the base schema. It is required for L2 conformance and above. Current draft values:
+
+- `user-stated`
+- `inferred`
+- `mixed`
 
 Current draft `type` values:
 
@@ -77,10 +93,13 @@ Required fields:
 - `id`
 - `description`
 - `source_type`
+- `source_ref`
 - `strength`
 - `timestamp`
 
 `strength` is a number between 0 and 1.
+
+`source_ref` is optional in the base schema. It is required for L2 conformance and above. It is an opaque provenance pointer or URI and should not embed private evidence content.
 
 Current draft `source_type` values:
 

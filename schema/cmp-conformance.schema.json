@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/filinils/cognitive-model-protocol/schema/cmp-conformance.schema.json",
+  "$comment": "SPDX-License-Identifier: Apache-2.0",
+  "title": "CMP Conformance Disclosure",
+  "description": "Schema for an implementation's self-declared or assessed CMP conformance claim.",
+  "type": "object",
+  "required": [
+    "protocolVersion",
+    "claimedLevel",
+    "claimedExtensions",
+    "attestation",
+    "contactUrl",
+    "sourceUrl"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "protocolVersion": {
+      "type": "string",
+      "const": "0.2.0-draft"
+    },
+    "claimedLevel": {
+      "type": "string",
+      "enum": [
+        "L1",
+        "L2",
+        "L3"
+      ]
+    },
+    "claimedExtensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "version"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^(ext:[a-z0-9][a-z0-9._-]*)$"
+          },
+          "version": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "attestation": {
+      "type": "object",
+      "required": [
+        "type",
+        "assertedAt"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "self-declared",
+            "third-party-assessed"
+          ]
+        },
+        "assertedBy": {
+          "type": "string"
+        },
+        "assertedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "assessmentUrl": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "contactUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "sourceUrl": {
+      "type": "string",
+      "format": "uri"
+    }
+  }
+}

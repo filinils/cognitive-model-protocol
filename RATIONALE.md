@@ -73,4 +73,30 @@ CMP is intended to separate the protocol from any particular software system.
 - How should a protocol distinguish local task context from durable collaboration patterns?
 - What belongs in the protocol, and what belongs in implementations?
 
+## 8. Why Conformance Uses a Floor and Levels
+
+Conformance needs a non-negotiable minimum because some CMP requirements are safety and boundary conditions, not optional capabilities.
+
+A graded standard can describe increasing capability, but it must not imply that lower levels may ignore consent, inspectability, uncertainty, falsifiability, or the distinction between collaboration and identity. The Floor defines the requirements that must hold for any conformant implementation, regardless of level or extension.
+
+Levels then describe capability above that Floor. L1 describes core hypothesis representation. L2 adds accountability over time. L3 adds portable machine-readable interchange. The levels grade completeness of implementation, not the degree to which the Floor is satisfied.
+
+## 9. Why Extensions Exist
+
+CMP core deliberately stays small. It should standardize only what independent implementations need to exchange collaboration models.
+
+Some capabilities may be useful but should not become core protocol concepts. Extensions provide a place for those capabilities to declare additional requirements without weakening the Floor or importing product logic into the protocol.
+
+An extension is therefore a mechanism for stricter, named, versioned requirements outside the core. It is not a way to relax CMP boundaries.
+
+## 10. Why Matching Is an Extension, Not Core CMP
+
+Matching and recommendation create risks that differ from representing a collaboration model. They may involve pools, disclosure between parties, proposed connections, and incentives to rank or score people.
+
+CMP core does not define matching, recommendation, ranking, compatibility scoring, or a matching algorithm.
+
+The `ext:matching` extension reconciles this boundary by specifying requirements for implementations that choose to match. It requires separate opt-in, double consent before connection, inspectable and falsifiable rationales, and no matching on identity or protected attributes.
+
+This gives implementations a way to declare matching capability while keeping CMP neutral. The protocol gains a requirements mechanism; it does not become a recommender.
+
 CMP is an experiment. The current draft should be challenged before it is expanded.

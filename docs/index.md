@@ -2,7 +2,7 @@
 
 CMP is an experimental interoperability protocol for evidence-based working models of human-AI collaboration.
 
-Current status: `0.1.0-draft`, seeking criticism.
+Current status: `0.2.0-draft`, seeking criticism.
 
 ## Canonical Reference
 
@@ -15,6 +15,7 @@ Read [reference/current.md](https://github.com/filinils/cognitive-model-protocol
 - [Rationale](https://github.com/filinils/cognitive-model-protocol/blob/main/RATIONALE.md)
 - [Draft field specification](https://github.com/filinils/cognitive-model-protocol/blob/main/SPEC.md)
 - [JSON Schema](https://github.com/filinils/cognitive-model-protocol/blob/main/schema/cmp.schema.json)
+- [Conformance disclosure schema](https://github.com/filinils/cognitive-model-protocol/blob/main/schema/cmp-conformance.schema.json)
 - [Examples](examples.md)
 - [Quickstart](quickstart.md)
 - [LLM discovery](llms.txt)
